@@ -111,7 +111,7 @@ const App = () => {
                 >
                  Ayor Folorunso
                 </Typography>
-                <Typography variant="h4" color={colors.greenAccent[400]}>
+                <Typography variant="h3" color={colors.greenAccent[700]}>
                   Data Scientist/ Developer
                 </Typography>
               </Box>
