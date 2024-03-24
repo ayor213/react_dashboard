@@ -5,14 +5,13 @@ import Topbar from './scenes/global/Topbar.jsx';
 
 
 function App() {
-  const [theme, colorMode] = useMode();
-  
+  const[theme, colorMode] = useMode;
   return (
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
     <div className="app">
-      <main className="content">
+      <main className='content'>
         <Topbar />
       </main>
 
