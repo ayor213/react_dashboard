@@ -34,6 +34,10 @@ html, body, #root, .app, .content {
   background: #555;
 }
 
+/*
+Removed the duplicate body and code styles, since they were overwritten by the initial styles.
+If needed, you can uncomment and customize the 'font-family' for the 'code' selector to differentiate it.
+*/
 
 /* Example to style <code> tags specifically, uncomment if you need it
 code {
