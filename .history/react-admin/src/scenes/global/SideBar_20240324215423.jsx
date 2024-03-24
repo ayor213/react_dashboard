@@ -47,7 +47,7 @@ const App = () => {
     <Box
     sx={{
       "& .ps-sidebar-container": {
-        background: `${colors.primary[400]} !important`,
+        background: `${colors.primary[100]} !important`,
       },
       "& .ps-menu-icon": {
         backgroundColor: "transparent !important",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
-//import "react-pro-sidebar/dist/css/styles.css";
+import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -13,8 +13,6 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import CandlestickChartOutlinedIcon from '@mui/icons-material/CandlestickChartOutlined';
-import WaterfallChartOutlinedIcon from '@mui/icons-material/WaterfallChartOutlined';
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
@@ -45,23 +43,23 @@ const App = () => {
 
   return (
     <Box
-    sx={{
-      "& .ps-sidebar-container": {
-        background: `${colors.primary[400]} !important`,
-      },
-      "& .ps-menu-icon": {
-        backgroundColor: "transparent !important",
-      },
-      "& .ps-menuitem": {
-        padding: "5px 35px 5px 20px !important",
-      },
-      "& .ps-menuitem:hover": {
-        color: "#868dfb !important",
-      },
-      "& .ps-active": {
-        color: "#6870fa !important",
-      },
-    }}
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#868dfb !important",
+        },
+        "& .pro-menu-item.active": {
+          color: "#6870fa !important",
+        },
+      }}
     >
       <Sidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
@@ -82,7 +80,7 @@ const App = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  BioCleek
+                  ADMIN
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -111,7 +109,7 @@ const App = () => {
                 >
                  Ayor Folorunso
                 </Typography>
-                <Typography variant="h5" color={colors.redAccent[700]}>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
                   Data Scientist/ Developer
                 </Typography>
               </Box>
@@ -214,23 +212,9 @@ const App = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Map"
+              title="Geography Chart"
               to="/geography"
               icon={<MapOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Box Plot"
-              to="/boxPlot"
-              icon={<CandlestickChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-              <Item
-              title="Waterfall"
-              to="/waterfall"
-              icon={<WaterfallChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

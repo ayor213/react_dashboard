@@ -46,19 +46,19 @@ const App = () => {
   return (
     <Box
     sx={{
-      "& .ps-sidebar-container": {
-        background: `${colors.primary[400]} !important`,
+      "& .pro-sidebar-inner": {
+        background: `${colors.grey[900]} !important`,
       },
-      "& .ps-menu-icon": {
+      "& .pro-icon-wrapper": {
         backgroundColor: "transparent !important",
       },
-      "& .ps-menuitem": {
+      "& .pro-inner-item": {
         padding: "5px 35px 5px 20px !important",
       },
-      "& .ps-menuitem:hover": {
+      "& .pro-inner-item:hover": {
         color: "#868dfb !important",
       },
-      "& .ps-active": {
+      "& .pro-menu-item.active": {
         color: "#6870fa !important",
       },
     }}

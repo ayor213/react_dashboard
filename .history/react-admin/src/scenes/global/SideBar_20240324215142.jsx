@@ -47,15 +47,15 @@ const App = () => {
     <Box
     sx={{
       "& .ps-sidebar-container": {
-        background: `${colors.primary[400]} !important`,
+        background: `${colors.primary[100]} !important`,
       },
-      "& .ps-menu-icon": {
+      "& .ps-icon-wrapper": {
         backgroundColor: "transparent !important",
       },
-      "& .ps-menuitem": {
+      "& .ps-inner-item": {
         padding: "5px 35px 5px 20px !important",
       },
-      "& .ps-menuitem:hover": {
+      "& .ps-inner-item:hover": {
         color: "#868dfb !important",
       },
       "& .ps-active": {

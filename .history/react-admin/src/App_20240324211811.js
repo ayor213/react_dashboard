@@ -69,8 +69,6 @@ function App() {
               {/* <Route path="/faq" element={<FAQ />} /> */}
               {/* <Route path="/calendar" element={<Calendar />} /> */}
               {/* <Route path="/geography" element={<Waterfall />} /> */}
-              {/* <Route path="/boxPlot" element={<Waterfall />} /> */}
-              {/* <Route path="/waterfall" element={<Waterfall />} /> */}
             </Routes>
           </main>
         </div>
