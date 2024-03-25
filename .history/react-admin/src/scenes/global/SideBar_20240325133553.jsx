@@ -29,9 +29,8 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       onClick={() => setSelected(title)}
       icon={icon}
     >
-    <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
       <Typography>{title}</Typography>
-    </Link>
+      <Link to={to} />
     </MenuItem>
   );
 };
@@ -140,7 +139,7 @@ const App = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Contacts"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
@@ -232,7 +231,7 @@ const App = () => {
               icon={<WaterfallChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
           </Box>
         </Menu>
       </Sidebar>

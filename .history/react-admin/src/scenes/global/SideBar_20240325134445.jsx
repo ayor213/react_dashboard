@@ -29,7 +29,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       onClick={() => setSelected(title)}
       icon={icon}
     >
-    <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to={to}>
       <Typography>{title}</Typography>
     </Link>
     </MenuItem>

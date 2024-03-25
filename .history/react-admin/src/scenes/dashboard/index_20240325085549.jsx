@@ -4,7 +4,7 @@ const Dashboard= () =>{
    return <Box m= "20px">
     <Box display="flex"
     justifyContent= "space-between"
-    alignItems="center">
+    alignItems={center}>
     <Header title = "DASHBOARD" subtitle="Welcome to your Analystics Dashboard" />
     </Box>
 

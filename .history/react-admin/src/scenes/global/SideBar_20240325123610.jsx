@@ -25,13 +25,14 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   return (
     <MenuItem
       active={selected === title}
-      style={{color: colors.grey[100],}}
+      style={{
+        color: colors.grey[100],
+      }}
       onClick={() => setSelected(title)}
       icon={icon}
     >
-    <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
       <Typography>{title}</Typography>
-    </Link>
+      <Link to={to} />
     </MenuItem>
   );
 };
@@ -135,7 +136,8 @@ const App = () => {
             </Typography>
             <Item
               title="Manage Team"
-              to="/team"
+              component={<Link to="/team" />}
+              //to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
