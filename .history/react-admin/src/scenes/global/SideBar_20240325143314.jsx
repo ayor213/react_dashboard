@@ -53,11 +53,10 @@ const App = () => {
       },
       "& .ps-menuitem": {
         padding: "5px 35px 5px 20px !important",
-        
       },
       "& .ps-menuitem:hover": {
         color: "#868dfb !important",
-        
+        borderBottom: 1px,
       },
       "& .ps-active": {
         color: "#6870fa !important",

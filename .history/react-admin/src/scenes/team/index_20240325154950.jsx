@@ -83,10 +83,10 @@ const Team = () => {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            color: `${colors.greenAccent[300]} !important`,
+            color: `${colors.blueAccent[300]} !important`,
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: `${colors.blueAccent[100]} !important`,
+            backgroundColor: `${colors.blueAccent[700]} !important`,
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {

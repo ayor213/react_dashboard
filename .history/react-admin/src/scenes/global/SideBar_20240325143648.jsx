@@ -53,7 +53,7 @@ const App = () => {
       },
       "& .ps-menuitem": {
         padding: "5px 35px 5px 20px !important",
-        
+        border: "2px",
       },
       "& .ps-menuitem:hover": {
         color: "#868dfb !important",
