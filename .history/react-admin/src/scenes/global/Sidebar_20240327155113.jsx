@@ -223,7 +223,7 @@ const App = () => {
             />
             <Item
               title="Box Plot"
-              to="/box"
+              to="/boxPlot"
               icon={<CandlestickChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

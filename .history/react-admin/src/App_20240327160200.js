@@ -15,7 +15,7 @@ import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
 import Map from "./scenes/map";
 // import Waterfall from "./scenes/waterfall";
-import BoxPlot from "./scenes/box";
+// import BoxPlot from "./scenes/boxPlot";
 // import Calendar from "./scenes/calendar/calendar";
 
 
@@ -44,8 +44,8 @@ function App() {
               <Route path="/line" element={<Line />} />
               <Route path="/faq" element={<FAQ />} />
               {/* <Route path="/calendar" element={<Calendar />} /> */}
-              <Route path="/map" element={<Map />} />
-              <Route path="/box" element={<BoxPlot />} />
+              <Route path="/geography" element={<Map />} />
+              {/* <Route path="/boxPlot" element={<Boxplot />} /> */}
               {/* <Route path="/waterfall" element={<Waterfall />} /> */}
             </Routes>
           </main>

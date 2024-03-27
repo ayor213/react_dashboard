@@ -3725,6 +3725,7 @@ export const mockGeographyData = [
   },
 ];
 
+
 export const mockBoxData = [
   {
     "group": "Alpha",

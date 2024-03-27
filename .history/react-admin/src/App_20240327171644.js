@@ -45,7 +45,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               {/* <Route path="/calendar" element={<Calendar />} /> */}
               <Route path="/map" element={<Map />} />
-              <Route path="/box" element={<BoxPlot />} />
+              <Route path="/box" element={<Boxplot />} />
               {/* <Route path="/waterfall" element={<Waterfall />} /> */}
             </Routes>
           </main>
