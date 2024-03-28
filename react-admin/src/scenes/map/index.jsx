@@ -12,7 +12,7 @@ const Map = () => {
       <Box  
       height="75vh"
       border={`1px solid ${colors.grey[100]}`}
-    borderRadius="4px">
+      borderRadius="4px">
         <MapChart />
       </Box>
     </Box>
