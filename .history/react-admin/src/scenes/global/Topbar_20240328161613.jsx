@@ -8,7 +8,6 @@ import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -20,7 +19,7 @@ const Topbar = () => {
       {/* SEARCH BAR */}
       <Box
         display="flex"
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.primary[100]}
         borderRadius="3px"
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
@@ -44,13 +43,9 @@ const Topbar = () => {
         <IconButton>
           <SettingsRoundedIcon />
         </IconButton>
-
-        <Link to="/team">
-          <IconButton>
-            <PersonOutlineRoundedIcon />
-          </IconButton>
-        </Link>
-        
+        <IconButton>
+          <PersonOutlineRoundedIcon />
+        </IconButton>
       </Box>
     </Box>
   );

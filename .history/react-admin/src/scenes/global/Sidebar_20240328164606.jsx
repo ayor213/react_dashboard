@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <Box
-  
+    overflow ="auto"
     sx={{
       "& .ps-sidebar-container": {
         background: `${colors.primary[400]} !important`,

@@ -8,7 +8,6 @@ import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -44,13 +43,9 @@ const Topbar = () => {
         <IconButton>
           <SettingsRoundedIcon />
         </IconButton>
-
-        <Link to="/team">
-          <IconButton>
-            <PersonOutlineRoundedIcon />
-          </IconButton>
-        </Link>
-        
+        <IconButton>
+          <PersonOutlineRoundedIcon />
+        </IconButton>
       </Box>
     </Box>
   );

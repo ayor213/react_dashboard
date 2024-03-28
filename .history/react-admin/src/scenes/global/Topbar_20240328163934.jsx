@@ -46,6 +46,7 @@ const Topbar = () => {
         </IconButton>
 
         <Link to="/team">
+
           <IconButton>
             <PersonOutlineRoundedIcon />
           </IconButton>

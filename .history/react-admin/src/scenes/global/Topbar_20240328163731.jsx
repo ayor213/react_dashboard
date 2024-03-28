@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, Icon, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -16,6 +16,7 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
+   
     <Box display="flex" justifyContent="space-between" p={2}>
       {/* SEARCH BAR */}
       <Box
@@ -38,19 +39,19 @@ const Topbar = () => {
             <LightModeRoundedIcon />
           )}
         </IconButton>
+
         <IconButton>
           <NotificationsRoundedIcon />
         </IconButton>
         <IconButton>
           <SettingsRoundedIcon />
         </IconButton>
-
-        <Link to="/team">
-          <IconButton>
-            <PersonOutlineRoundedIcon />
-          </IconButton>
-        </Link>
         
+        <Link to="/team">
+        <IconButton>
+          <PersonOutlineRoundedIcon />
+        </IconButton>
+        </Link>
       </Box>
     </Box>
   );
