@@ -39,8 +39,8 @@ const Dashboard= () =>{
           <Button
             sx={{
               ...(isMobile 
-                ? {backgroundColor: colors.blueAccent[400],
-                color: colors.grey[100],
+                ? backgroundColor: colors.blueAccent[700],
+                color: colors.grey[100],{ 
                   fontSize: "8px",
                 fontWeight: "bold",
                 padding: "5px 10px",}

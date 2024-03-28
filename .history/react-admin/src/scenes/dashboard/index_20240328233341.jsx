@@ -25,7 +25,7 @@ const Dashboard= () =>{
    return (
    <Box sx={{
           ...(isMobile 
-            ? { m: "0px", pb: "3rem" }
+            ? { m: "20px", pb: "3rem" }
             : { m: "1.7rem", pb: "3rem" }
           )
         }}
@@ -38,19 +38,11 @@ const Dashboard= () =>{
     <Box>
           <Button
             sx={{
-              ...(isMobile 
-                ? {backgroundColor: colors.blueAccent[400],
-                color: colors.grey[100],
-                  fontSize: "8px",
-                fontWeight: "bold",
-                padding: "5px 10px",}
-                : {
               backgroundColor: colors.blueAccent[700],
               color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
-            })
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
