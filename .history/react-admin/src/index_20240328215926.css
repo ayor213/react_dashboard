@@ -33,17 +33,14 @@ html, body, #root, .app, .content {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .dash > div:nth-child(2) {
-    grid-template-columns: repeat(6, 1fr); /* Adjust number of columns for tablets */
-  }
+/* Tablet styles */
+@media (min-width: 600px) {
+  .dash { flex-wrap: wrap;}
 }
 
-@media (max-width: 480px) {
-  .dash > div:nth-child(2) {
-    grid-template-columns: repeat(2, 1fr); /* Adjust for mobile */
-  }
+/* Desktop styles */
+@media (min-width: 1200px) {
+  .dash { flex-wrap: wrap;}
 }
 
 /* Example to style <code> tags specifically, uncomment if you need it

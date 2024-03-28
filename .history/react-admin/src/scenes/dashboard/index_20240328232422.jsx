@@ -238,24 +238,24 @@ const Dashboard= () =>{
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "0 30px"}}
+            sx={{ padding: "30px 30px 0 30px" }}
           >
             Sales Quantity Per Region
           </Typography>
-          <Box height="560px" mt="20px">
+          <Box height="560px" mt="-20px">
             <BarChart isDashboard={true} />
           </Box>
       </Box>
         <Box
           gridColumn={isMobile ? "span 12":"span 6"}
-          gridRow="span 3"
+          gridRow={isMobile ? "span 6":"span 3"}
           backgroundColor={colors.primary[400]}
           padding="30px"
         >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "35px" }}
+            sx={{ marginBottom: "15px" }}
           >
             Global Sales Traffic
           </Typography>

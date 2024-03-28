@@ -19,18 +19,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const Dashboard= () =>{
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
-   const isMobile = useMediaQuery('(max-width:600px)');
+   const isMobile = useMediaQuery('(max-width:480px)');
   
 
    return (
-   <Box sx={{
-          ...(isMobile 
-            ? { mr: "10px", pb: "3rem" }
-            : { m: "1.7rem", pb: "3rem" }
-          )
-        }}
-        className="dash"
-    > 
+   <Box m= "1.7rem" pb="3rem"  class= "dash">
     <Box 
     display="flex"
      justifyContent= "space-between" alignItems="center">
@@ -238,16 +231,16 @@ const Dashboard= () =>{
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "0 30px"}}
+            sx={{ padding: "30px 30px 0 30px" }}
           >
             Sales Quantity Per Region
           </Typography>
-          <Box height="560px" mt="20px">
+          <Box height="560px" mt="-20px">
             <BarChart isDashboard={true} />
           </Box>
       </Box>
         <Box
-          gridColumn={isMobile ? "span 12":"span 6"}
+          gridColumn={isMobile ? "span 9":"span 6"}
           gridRow="span 3"
           backgroundColor={colors.primary[400]}
           padding="30px"
@@ -255,7 +248,7 @@ const Dashboard= () =>{
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "35px" }}
+            sx={{ marginBottom: "15px" }}
           >
             Global Sales Traffic
           </Typography>

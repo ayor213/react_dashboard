@@ -14,23 +14,16 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import PieChart from "../../components/PieChart";
 import ProgressCircle from "../../components/ProgressCircle";
-import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 const Dashboard= () =>{
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
-   const isMobile = useMediaQuery('(max-width:600px)');
-  
+ 
 
    return (
-   <Box sx={{
-          ...(isMobile 
-            ? { mr: "10px", pb: "3rem" }
-            : { m: "1.7rem", pb: "3rem" }
-          )
-        }}
-        className="dash"
-    > 
+   <Box m= "1.7rem" pb="3rem"  class= "dash">
     <Box 
     display="flex"
      justifyContent= "space-between" alignItems="center">
@@ -53,6 +46,13 @@ const Dashboard= () =>{
 
       {/* GRID & CHARTS */}
       <Box
+      sx={{
+        display: 'flex',
+        flexDirection: { md: 'column', lg: 'row' }, // Stack on small screens, row on medium and up
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: { xs: '1rem', md: '0' }, // Add gap on small screens
+      }}
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="10rem"
@@ -61,7 +61,7 @@ const Dashboard= () =>{
       >
         {/* ROW 1 */}
         <Box
-          gridColumn={isMobile ? "span 6":"span 3"}
+          gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -80,7 +80,7 @@ const Dashboard= () =>{
           />
         </Box>
         <Box
-          gridColumn={isMobile ? "span 6":"span 3"}
+          gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -99,7 +99,7 @@ const Dashboard= () =>{
           />
         </Box>
         <Box
-          gridColumn={isMobile ? "span 6":"span 3"}
+          gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -118,7 +118,7 @@ const Dashboard= () =>{
           />
         </Box>
         <Box
-          gridColumn={isMobile ? "span 6":"span 3"}
+          gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -139,7 +139,7 @@ const Dashboard= () =>{
 
         {/* ROW 2 */}
         <Box
-          gridColumn={isMobile ? "span 12":"span 8"}
+          gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
@@ -180,7 +180,7 @@ const Dashboard= () =>{
         </Box>
 
         <Box
-          gridColumn={isMobile ? "span 12":"span 4"}
+          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
@@ -231,23 +231,24 @@ const Dashboard= () =>{
         </Box>
          {/* ROW 3 */}
         <Box
-          gridColumn={isMobile ? "span 12":"span 6"}
+          gridColumn="span 6"
           gridRow="span 3"
           backgroundColor={colors.primary[400]}
         >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "0 30px"}}
+            sx={{ padding: "30px 30px 0 30px" }}
           >
             Sales Quantity Per Region
           </Typography>
-          <Box height="560px" mt="20px">
+          <Box height="560px" mt="-20px">
             <BarChart isDashboard={true} />
           </Box>
       </Box>
+
         <Box
-          gridColumn={isMobile ? "span 12":"span 6"}
+          gridColumn="span 6"
           gridRow="span 3"
           backgroundColor={colors.primary[400]}
           padding="30px"
@@ -255,7 +256,7 @@ const Dashboard= () =>{
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "35px" }}
+            sx={{ marginBottom: "15px" }}
           >
             Global Sales Traffic
           </Typography>
@@ -266,7 +267,7 @@ const Dashboard= () =>{
         {/* ROW 4 */}
 
         <Box
-          gridColumn={isMobile ? "span 12":"span 4"}
+          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
@@ -307,7 +308,7 @@ const Dashboard= () =>{
         </Box>
 
         <Box
-          gridColumn={isMobile ? "span 12":"span 4"}
+          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="40px"
@@ -334,7 +335,7 @@ const Dashboard= () =>{
         </Box>
         
         <Box
-          gridColumn={isMobile ? "span 12":"span 4"}
+          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
