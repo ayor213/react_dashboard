@@ -33,7 +33,7 @@ const MapChart = ({ isDashboard = false }) => {
           },
         },
       },
-      legends: {
+      legends: isDashboard ? undefined: {
         text: {
           fill: colors.grey[100],
         },
@@ -52,7 +52,7 @@ const MapChart = ({ isDashboard = false }) => {
         label="properties.name"
         valueFormat=".2s"
         projectionType="naturalEarth1"
-        projectionScale={isDashboard ? 40 : 150}
+        projectionScale={isDashboard ? 180 : 320}
         projectionTranslation={isDashboard ? [0.49, 0.6] : [0.5, 0.5]}
         projectionRotation={[0, 0, 0]}
         borderWidth={1.5}
@@ -123,12 +123,12 @@ const MapChart = ({ isDashboard = false }) => {
                 anchor: 'bottom-left',
                 direction: 'column',
                 justify: true,
-                translateX: 1000,
+                translateX: 60,
                 translateY: -20,
                 itemsSpacing: 0,
                 itemWidth: 86,
                 itemHeight: 37,
-                itemDirection: 'right-to-left',
+                itemDirection: 'left-to-right',
                 itemTextColor: colors.grey[100],
                 itemOpacity: 0.85,
                 symbolSize: 18,

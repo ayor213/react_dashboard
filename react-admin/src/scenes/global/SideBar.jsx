@@ -91,18 +91,18 @@ const App = () => {
               </Box>
             )}
           </MenuItem>
-
-          {!isCollapsed && (
-            <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
+          <Box display="flex" justifyContent="center" alignItems="center">
                 <img
-                  alt="profile-user"
-                  width="100px"
-                  height="100px"
-                  src={`../../assets/user.png`}
+                  alt="company_logo"
+                  width={isCollapsed ? "50%" : "80px"}
+                  height={isCollapsed ? "50%" : "80px"}
+                  src={`../../assets/biocleeklogo.png`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
+          {!isCollapsed && (
+            <Box mb="25px">
+         
               <Box textAlign="center">
                 <Typography
                   variant="h2"
@@ -110,10 +110,10 @@ const App = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                 Ayor Folorunso
+                 Analytics and Performance
                 </Typography>
                 <Typography variant="h4" color={colors.greenAccent[400]}>
-                  Data Scientist/ Developer
+                  Interactive Dashboard
                 </Typography>
               </Box>
             </Box>

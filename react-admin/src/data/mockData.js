@@ -5326,4 +5326,6 @@ export const mockBoxData = [
     "n": 20,
     "value": 5.890850506259931
   }
-]
+];
+
+export const mockRadarData = [];

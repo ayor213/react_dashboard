@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { mockBoxData as data } from "../data/mockData";
 
-const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
+const BoxPlot = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -13,7 +13,7 @@ const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
     data={data}
     theme={{
       // added
-      axis: {
+      axis: { 
         domain: {
           line: {
             stroke: colors.grey[100],
@@ -34,7 +34,9 @@ const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
           },
         },
       },
-      legends: {
+      legends:
+      {
+    
         text: {
           fill: colors.grey[100],
         },
@@ -50,8 +52,8 @@ const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
     maxValue={10}
     subGroupBy="subgroup"
     padding={0.12}
-    enableGridX={true}
-    axisTop={{
+    enableGridX={isDashboard ? false : true}
+    axisTop={ isDashboard ? undefined:{
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
@@ -59,7 +61,7 @@ const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
         legendOffset: 36,
         truncateTickAt: 0
     }}
-    axisRight={{
+    axisRight={isDashboard ? undefined:{
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
@@ -86,9 +88,9 @@ const BoxPlot = ({ isCustomLineColors = false, isDashboard = false }) => {
         truncateTickAt: 0
     }}
     colors={{ scheme: 'accent' }}
-    borderRadius={7}
-    borderWidth={2}
-    borderColor={{
+    borderRadius={isDashboard ? 0:7}
+    borderWidth={isDashboard ? undefined:2}
+    borderColor={isDashboard ? undefined:{
         from: 'color',
         modifiers: [
             [
