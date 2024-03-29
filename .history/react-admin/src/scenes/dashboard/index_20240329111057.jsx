@@ -263,7 +263,7 @@ const Dashboard= () =>{
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "25px" }}
+            sx={{ marginBottom: "35px" }}
           >
             Global Sales Traffic
           </Typography>
