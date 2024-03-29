@@ -25,7 +25,7 @@ const Dashboard= () =>{
    return (
    <Box sx={{
           ...(isMobile 
-            ? { ml: "15px",mr: "15px",mb: "15px", pb: "3rem" }
+            ? { m: "10px", pb: "3rem" }
             : { m: "1.7rem", pb: "3rem" }
           )
         }}
